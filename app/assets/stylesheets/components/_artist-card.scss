@@ -1,0 +1,45 @@
+#artists {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12px 72px;
+
+  #artist {
+    display: flex;
+    align-items: stretch;
+    flex: 0 0 50%;
+    position: relative;
+    &:hover{
+
+      .aa {
+        transition: all .25s ease-in-out;
+        background-color: $secondary;
+      }
+      .bb {
+        transition: all .25s ease-in-out;
+        background-color: $primary;
+      }
+    }
+    .sucre {
+      margin: 12px;
+      padding: 12px;
+      background: white;
+    }
+    .dot {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+    }
+    .aa {
+      top: 5px;
+      left: 0px;
+      background-color: $primary;
+    }
+    .bb {
+      top: 0px;
+      left: 5px;
+      background-color: $secondary;
+      z-index: -1;
+    }
+  }
+}
