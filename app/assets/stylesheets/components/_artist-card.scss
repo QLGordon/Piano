@@ -1,15 +1,58 @@
-#artists {
+section {
   display: flex;
   flex-wrap: wrap;
-  padding: 12px 72px;
+  padding: 6px 12px;
 
   #artist {
     display: flex;
     align-items: stretch;
     flex: 0 0 50%;
     position: relative;
-    &:hover{
+    height: 300px;
+    padding: 12px;
+    .sucre {
+      // background: white;
+      // margin: 6px;
+      padding: 24px;
+      display: flex;
+      position: relative;
+      img {
+        // position: absolute;
+        width: 100px;
+        margin-right: 6px;
+        object-fit: cover;
+      }
+      h3 {
+        display: inline;
+        font-size: 1.8em;
+        font-weight: bold;
+        box-shadow: $primary inset 0em 0em 0em 0em;
+        padding: .2em .25em 0 6px;
+      }
+      p {
+        overflow: auto;
+        height: 194px;
+        padding: 12px;
+        border: $primary 1px solid;
+      }
+    .dot {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 15px;
+      right: 15px;
 
+
+    }
+    .aa {
+
+      background-color: $primary;
+    }
+    .bb {
+      background-color: $secondary;
+      z-index: -1;
+    }
+    &:hover{
       .aa {
         transition: all .25s ease-in-out;
         background-color: $secondary;
@@ -18,28 +61,12 @@
         transition: all .25s ease-in-out;
         background-color: $primary;
       }
+      h3 {
+        transition: all .25s ease-in-out;
+        box-shadow: $primary inset 0em -1.25em 0em 0em;
+        color: white;
+      }
     }
-    .sucre {
-      margin: 12px;
-      padding: 12px;
-      background: white;
-    }
-    .dot {
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-    }
-    .aa {
-      top: 5px;
-      left: 0px;
-      background-color: $primary;
-    }
-    .bb {
-      top: 0px;
-      left: 5px;
-      background-color: $secondary;
-      z-index: -1;
     }
   }
 }
