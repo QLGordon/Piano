@@ -12,7 +12,7 @@ const initMarkdown = () => {
 }
 const markdownShow = () => {
   const markdownText = document.getElementById('markdown-text');
-  console.log(markdownText.innerHTML);
+
   if (markdownText) {
     const html = markdown.toHTML(markdownText.innerHTML);
     markdownText.innerHTML = html;
