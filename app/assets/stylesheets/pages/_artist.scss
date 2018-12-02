@@ -7,19 +7,43 @@
   z-index: -1;
 }
 #artist {
-
+  padding: 5vw;
   .infos {
+    #markdown {
+      min-height: 100px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 6px 12px;
+      text-align: left;
+      width: 100%;
+    }
+    position: relative;
     border: $primary 10px solid;
-    margin: 150px 5vw;
+    margin: 50px auto;
     background: white;
     padding: 10vw;
+    img {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: $primary 10px solid;
+    }
     h2 {
       font-size: 8vw;
       font-weight: bold;
       padding-bottom: 24px;
     }
     p {
-      column-count: 3;
+      column-count: 2;
+    }
+    input {
+    }
+    textarea {
+      height: 300px;
     }
   }
 }

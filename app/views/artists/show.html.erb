@@ -1,10 +1,12 @@
 
-  <img class="artist-banner" src="<%= @artist.photo %>" alt="<%= @artist.first_name %>-<%= @artist.last_name %>">
+<img class="artist-banner" src="<%= @artist.photo %>" alt="<%= @artist.first_name %>-<%= @artist.last_name %>">
 <section id="artist">
   <article class="infos">
+  <%= link_to 'edit', edit_artist_path %>
+  <img src="<%= @artist.photo %>" alt="<%= @artist.first_name %>-<%= @artist.last_name %>">
   <h2><%= @artist.first_name %> <%= @artist.last_name %></h2>
-  <p>
+  <div id="markdown-text">
     <%= @artist.bio %>
-  </p>
+  </div>
   </article>
 </section>

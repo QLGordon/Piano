@@ -1,0 +1,17 @@
+<section id="artist">
+  <article class="infos">
+    <h2>Edit Artist</h2>
+    <%= simple_form_for @artist, url: artist_path(@artist), method: :patch do |f| %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :bio, input_html: { id: 'editor'} %>
+  <div id="preview"></div>
+      <%= f.input :birth,
+                  start_year: Date.today.year - 90,
+                  end_year: Date.today.year - 12,
+                  order: [:day, :month, :year] %>
+      <%= f.input :photo %>
+      <%= f.submit %>
+<% end %>
+</article>
+</section>

@@ -4,7 +4,7 @@
 <section id="artists">
   <% @artists.each do |artist| %>
     <article id="artist">
-    <%= link_to artist_path(artist.id), class: 'artist' do  %>
+    <%= link_to artist_path(artist), class: 'artist' do  %>
       <div class="sucre">
       <img src=" <%= artist.photo %> " alt="" >
         <div>
