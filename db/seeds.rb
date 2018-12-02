@@ -1,8 +1,9 @@
 require 'faker'
 
+p 'Cleaning Instruments'
+Instrument.destroy_all
 p 'Cleaning Artists'
 Artist.destroy_all
-Instrument.destroy_all
 Event.destroy_all
 
 10.times do
@@ -15,7 +16,7 @@ Event.destroy_all
   )
 end
 
-10.times do
+15.times do
   offset = rand(Artist.count)
   rand_record = Artist.offset(offset).first
   talent = Instrument.create!(

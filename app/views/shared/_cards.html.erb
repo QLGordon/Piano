@@ -12,6 +12,11 @@
         <div class="dot bb"></div>
         <div class="dot aa"></div>
       </div>
+        <h6>
+          <% artist.instrument.each do |instruments| %>
+            #<%= instruments.instrument %>
+          <% end %>
+        </h6>
     <% end %>
     </article>
   <% end %>
