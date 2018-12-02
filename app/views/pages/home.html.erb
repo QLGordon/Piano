@@ -1,3 +1,22 @@
-<h1> <%= @artists.first.first_name %> <%= @artists.first.last_name %> </h1>
-<p> <%= @artists.first.bio %> </p>
+<section id="celimene">
+</section>
+
+<section id="artists">
+  <% @artists.each do |artist| %>
+    <article id="artist">
+    <%= link_to artist_path(artist), class: 'artist' do  %>
+      <div class="sucre">
+      <img src=" <%= artist.photo %> " alt="" >
+        <div>
+        <h3> <%=  artist.first_name %> <%=  artist.last_name %> </h3>
+
+        <p> <%= artist.bio %> </p>
+        </div>
+        <div class="dot bb"></div>
+        <div class="dot aa"></div>
+      </div>
+    <% end %>
+    </article>
+  <% end %>
+</section>
 
